@@ -17,7 +17,10 @@ public class Schedule {
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
 
-
+	@Scheduled(fixedRate = 10000)
+	public void reportCurrentTime() {
+		log.info("The time is now {}", dateFormat.format(new Date()));
+	}
 
 	@Scheduled(fixedRate = 15000)
 	public void reportCurrentTimes() {
