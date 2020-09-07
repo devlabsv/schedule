@@ -22,4 +22,8 @@ public class Schedule {
 	public void reportCurrentTime() {
 		log.info("The time is now {}", dateFormat.format(new Date()));
 	}
+	@Scheduled(fixedRate = 15000)
+	public void reportCurrentTimes() {
+		log.info("The time is now {}", dateFormat.format(new Date()));
+	}
 }
